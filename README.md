@@ -12,7 +12,7 @@ WebLogic generic and standalone wlst cli with Jython 2.7.1
 ## 【使用方法】
 - 进入Release页面，下载wlst-generic.<版本号>.tar.gz
 - 解压并进入wlst-generic/bin目录
-- 使用vi编辑wlst_generic.sh脚本  
+- 修改wlst_generic.sh脚本设置JAVA_HOME环境变量  
 修改JAVA_HOME=""为JAVA_HOME变量指定具体的JDK 1.7版本软件路径 , 例如: JAVA_HOME="/weblogic/jdk170_80"
 - 执行脚本  
 进入WLST命令行模式:  ./wlst_generic.sh  
