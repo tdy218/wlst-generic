@@ -20,7 +20,7 @@ WebLogic generic and standalone wlst cli with Jython 2.7.1
 ps.时间关系, 没搞Windows版的执行脚本, 感兴趣的朋友可以自行添加.
 
 ## 【执行样例】
-![WebLogic域中Servers列表](https://github.com/tdy218/wlst-generic/blob/master/resources/WLS_ServerList_Table.jpeg)
+![WebLogic域中Servers列表](https://github.com/tdy218/public-resources/blob/master/img/WLS_ServerList_Table.jpeg)
 
 ## 【问题反馈】
 - 本Project的Issues页面 或 发邮件至作者E-mail <tdy218@gmail.com>
