@@ -1,0 +1,11 @@
+# Resources Directory
+resources/
+README.md
+
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS:
+*/.DS_Store
