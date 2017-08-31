@@ -10,7 +10,7 @@ WebLogic generic and standalone wlst cli with Jython 2.7.1
 
 
 ## 【使用方法】
-- 安装Oracle JDK 1.7
+- 在将要运行该Project的主机上安装Oracle JDK 1.7软件
 - 进入Release页面，下载wlst-generic.<版本号>.tar.gz
 - 解压并进入wlst-generic/bin目录
 - 修改wlst_generic.sh脚本设置JAVA_HOME环境变量  
