@@ -1,0 +1,30 @@
+#!./jython
+
+# -*- coding: utf-8 -*-
+import re
+import sys
+import os
+import stat
+import fileinput
+import tempfile
+import shutil
+
+from java.io import File
+from pip import main
+
+def replace(file_path, pattern, subst):
+    fh, abs_path = tempfile.mkstemp()
+    with os.fdopen(fh,'w') as new_file:
+        with open(file_path) as old_file:
+            for line in old_file:
+                new_file.write(line.replace(pattern, subst))
+    os.remove(file_path)
+    shutil.move(abs_path, file_path)
+    File(file_path).setExecutable(True)
+
+
+if __name__ == '__main__':
+    replace('./jython', 'JAVA_HOME_RES=""', 'JAVA_HOME_RES="' + os.path.dirname(os.getcwd()) + '/jre"')
+    replace('./jython', 'JYTHON_HOME_RES=""', 'JYTHON_HOME_RES="' + os.path.dirname(os.getcwd()) + '/jython"')
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '--disable-pip-version-check', sys.argv[0])
+    sys.exit(main())
