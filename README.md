@@ -28,11 +28,10 @@ WebLogic generic and standalone wlst cli with Jython 2.7.1
 - 将你要连接的域使用的SSL根证书（xxx.jks，也支持其他与JDK兼容的SSL证书格式）拷贝至wlst-generic/security/cacerts目录下     
 例如：域开启"域管理端口(Administration Port)"之后，再用WLST连接域时，就需要用到t3s协议了。如果使用了WebLogic自带的DemoTrust证书，则需要将$WL_HOME/server/lib/DemoTrust.jks拷贝至wlst-generic/security/cacerts目录下.  
 - 解压并进入wlst-generic/bin目录    
-编辑wlst_generic.sh脚本，修改WLST_SECURE_ROOT_CERTIFICATE变量值，指向你刚拷贝到wlst-generic/security/cacerts目录下的SSL根证书.    
+编辑wlst_generic.sh脚本，修改WLST_SECURE_ROOT_CERTIFICATE变量值，指向你刚拷贝到wlst-generic/security/cacerts目录下的SSL根证书（默认指向10.3.6的DemoTrust，请根据实际情况改为实际的值）.    
 ```
 export WLST_SECURE_ROOT_CERTIFICATE="${WORKING_DIR}/security/cacerts/WLS11gDemoTrust.jks"  
-```        
-默认指向10.3.6的DemoTrust，请根据实际情况改为实际的值.   
+```      
 
 ps.1. 如果你要连接的域的WebLogic版本是12.1.2及以上版本(SSL证书的实现方式从Certicom-based变为JSSE-based，所以脚本中需要手工开启JSSE证书的支持)，则还需要将WLS_SSL_ENABLE_JSSE和WLS_SECURITY_ENABLE_JSSE这两个变量值改为true  
 ```
