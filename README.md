@@ -7,7 +7,7 @@ WebLogic generic and standalone wlst cli with Jython 2.7.1
 - 独立于WebLogic软件运行, 使用该程序包无需安装WebLogic软件
 - 原有的wlst/jython脚本几乎不用修改代码(99%不变)，还是熟悉的执行方式
 - 支持wlst命令行模式，还是熟悉的命令行界面
-- 从v1.1版本开始，支持t3s协议连接，支持pip和easy_install这两个包管理工具，可以在联网的环境下从Python一个公共资源库PyPI站点下载和安装包
+- 从v1.1版本开始，支持t3s协议连接，支持pip和easy_install这两个包管理工具，可以在联网的环境下从Python的公共资源库PyPI站点下载和安装包
 
 ## 【目录结构】  
 <img src="https://github.com/tdy218/public-resources/blob/master/img/project_tree.jpeg" alt="Project tree image" width="20%" height="20%">
