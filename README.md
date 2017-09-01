@@ -29,9 +29,9 @@ WebLogic generic and standalone wlst cli with Jython 2.7.1
 - 解压并进入wlst-generic/bin目录    
 编辑wlst_generic.sh脚本，修改WLST_SECURE_ROOT_CERTIFICATE变量值，指向你刚拷贝到wlst-generic/security/cacerts目录下的SSL根证书.    
 ```
-export WLST_SECURE_ROOT_CERTIFICATE="${WORKING_DIR}/security/cacerts/WLS11gDemoTrust.jks"   
+export WLST_SECURE_ROOT_CERTIFICATE="${WORKING_DIR}/security/cacerts/WLS11gDemoTrust.jks"  #改为实际的值  
 ```     
-改为实际的值，默认指向10.3.6的DemoTrust.       
+默认指向10.3.6的DemoTrust.       
 ps.1. 如果你要连接的域的WebLogic版本是12.1.2及以上版本(SSL证书的实现方式从Certicom-based变为JSSE-based，所以脚本中需要手工开启JSSE证书的支持)，则还需要将WLS_SSL_ENABLE_JSSE和WLS_SECURITY_ENABLE_JSSE这两个变量值改为true  
 ```
 export WLS_SSL_ENABLE_JSSE="false"   #改为true  
@@ -40,7 +40,8 @@ export WLS_SECURITY_ENABLE_JSSE="false"   #改为true
 ps.2. 如果你使用的SSL根证书格式不是JKS，请修改-Dweblogic.security.CustomTrustKeyStoreType属性参数值为你的根证书格式，其他地方不需要改（无论你使用的是DemoTrust还是CustomTrust，都不需要修改-Dweblogic.security.TrustKeyStore=CustomTrust，保持默认即可）    
 ps.3. 时间关系, 没搞Windows版的执行脚本, 感兴趣的朋友可以自行添加.
 
-## 【执行样例】   
+## 【执行样例】  
+
 ![WebLogic域中Servers列表](https://github.com/tdy218/public-resources/blob/master/img/WLS_ServerList_Table.jpeg)
 
 ## 【高级用法】
