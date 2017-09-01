@@ -25,8 +25,8 @@ WebLogic generic and standalone wlst cli with Jython 2.7.1
 ./pip install <包名>     #例如: ./pip install openpyxl  
 ./easy_install <包名>    #例如: ./easy_install openpyxl    
 
-#### 【pip安装第三方包样例】   
-<img src="https://github.com/tdy218/public-resources/blob/master/img/pip_install_packages.jpeg" alt="Package install by pip image" width="50%" height="50%">
+**pip安装第三方包样例**    
+<img src="https://github.com/tdy218/public-resources/blob/master/img/pip_install_packages.jpeg" alt="Package install by pip image" width="60%" height="30%">
 
 ### 【t3s协议连接配置和使用方法】
 - 将你要连接的域使用的SSL根证书（xxx.jks，也支持其他与JDK兼容的SSL证书格式）拷贝至wlst-generic/security/cacerts目录下     
@@ -44,16 +44,17 @@ export WLS_SECURITY_ENABLE_JSSE="false"   #改为true
 ```
 ps.2. 如果你使用的SSL根证书格式不是JKS，请修改-Dweblogic.security.CustomTrustKeyStoreType属性参数值为你的根证书格式，其他地方不需要改（无论你使用的是DemoTrust还是CustomTrust，都不需要修改-Dweblogic.security.TrustKeyStore=CustomTrust，保持默认即可）  
 
-#### 【t3s连接样例】  
+**t3s连接样例**     
 - WebLogic 10.3.6版本
-<img src="https://github.com/tdy218/public-resources/blob/master/img/t3s_connect_1036.jpeg" alt="wls 10.3.6 t3s connection image" width="70%" height="70%">
+<img src="https://github.com/tdy218/public-resources/blob/master/img/t3s_connect_1036.jpeg" alt="wls 10.3.6 t3s connection image" width="80%" height="80%">
+
 - WebLogic 12.1.3版本
-<img src="https://github.com/tdy218/public-resources/blob/master/img/t3s_connect_1213.jpeg" alt="wls 12.1.3 t3s connection image" width="70%" height="70%">   
+<img src="https://github.com/tdy218/public-resources/blob/master/img/t3s_connect_1213.jpeg" alt="wls 12.1.3 t3s connection image" width="80%" height="80%">   
 
 ps.3. 时间关系, 没搞Windows版的执行脚本, 感兴趣的朋友可以自行添加.
 
 ## 【使用该Project并引入第三方Package的执行样例】  
-<img src="https://github.com/tdy218/public-resources/blob/master/img/WLS_ServerList_Table.jpeg" alt="WebLogic域中Servers列表" width="70%" height="70%">
+<img src="https://github.com/tdy218/public-resources/blob/master/img/WLS_ServerList_Table.jpeg" alt="WebLogic域中Servers列表" width="80%" height="80%">
 
 ## 【高级用法】
 - 自助问题诊断方法   
