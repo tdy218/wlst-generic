@@ -14,7 +14,7 @@ WebLogic generic and standalone wlst cli with Jython 2.7.1
 
 ## 【使用方法】
 ### 【WLST命令行及Jython脚本执行方法】
-- 进入Release页面，下载wlst-generic.<版本号>.tar.gz
+- 进入[Release](https://github.com/tdy218/wlst-generic/releases "Release")页面，下载wlst-generic.<版本号>.tar.gz
 - 解压并进入wlst-generic/bin目录
 - 执行脚本  
 进入WLST命令行模式:  ./wlst_generic.sh  
