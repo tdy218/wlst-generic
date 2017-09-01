@@ -19,8 +19,9 @@ WebLogic generic and standalone wlst cli with Jython 2.7.1
 执行wlst/jython脚本:  ./wlst_generic.sh  /path/to/xxx.py
 
 ### 【包安装工具使用方法】
-- 进入wlst-generic/tools目录，执行pip或easy_install安装包
-./pip install <包名>     #例如: ./pip install openpyxl
+
+- 进入wlst-generic/tools目录，执行pip或easy_install安装包   
+./pip install <包名>     #例如: ./pip install openpyxl  
 ./easy_install <包名>    #例如: ./easy_install openpyxl
 
 ### 【t3s协议连接配置和使用方法】
