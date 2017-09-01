@@ -9,6 +9,9 @@ WebLogic generic and standalone wlst cli with Jython 2.7.1
 - 支持wlst命令行模式，还是熟悉的命令行界面
 - 从v1.1版本开始，支持t3s协议连接，支持pip和easy_install这两个包管理工具，可以在联网的环境下从Python一个公共资源库PyPI站点下载和安装包
 
+## 【目录结构】  
+
+![Project Tree](https://github.com/tdy218/public-resources/blob/master/img/project_tree.jpeg)
 
 ## 【使用方法】
 ### 【WLST命令行及Jython脚本执行方法】
@@ -22,7 +25,11 @@ WebLogic generic and standalone wlst cli with Jython 2.7.1
 
 - 进入wlst-generic/tools目录，执行pip或easy_install安装包   
 ./pip install <包名>     #例如: ./pip install openpyxl  
-./easy_install <包名>    #例如: ./easy_install openpyxl
+./easy_install <包名>    #例如: ./easy_install openpyxl    
+
+#### 【pip安装第三方包样例】
+
+![pip install package](https://github.com/tdy218/public-resources/blob/master/img/pip_install_packages.jpeg)
 
 ### 【t3s协议连接配置和使用方法】
 - 将你要连接的域使用的SSL根证书（xxx.jks，也支持其他与JDK兼容的SSL证书格式）拷贝至wlst-generic/security/cacerts目录下     
@@ -38,7 +45,14 @@ ps.1. 如果你要连接的域的WebLogic版本是12.1.2及以上版本(SSL证�
 export WLS_SSL_ENABLE_JSSE="false"   #改为true  
 export WLS_SECURITY_ENABLE_JSSE="false"   #改为true     
 ```
-ps.2. 如果你使用的SSL根证书格式不是JKS，请修改-Dweblogic.security.CustomTrustKeyStoreType属性参数值为你的根证书格式，其他地方不需要改（无论你使用的是DemoTrust还是CustomTrust，都不需要修改-Dweblogic.security.TrustKeyStore=CustomTrust，保持默认即可）    
+ps.2. 如果你使用的SSL根证书格式不是JKS，请修改-Dweblogic.security.CustomTrustKeyStoreType属性参数值为你的根证书格式，其他地方不需要改（无论你使用的是DemoTrust还是CustomTrust，都不需要修改-Dweblogic.security.TrustKeyStore=CustomTrust，保持默认即可）  
+
+#### 【t3s连接样例】
+
+- WebLogic 10.3.6版本
+![wls 10.3.6 t3s connection](https://github.com/tdy218/public-resources/blob/master/img/t3s_connect_1036.jpeg)
+- WebLogic 12.1.3版本
+![wls 12.1.3 t3s connection](https://github.com/tdy218/public-resources/blob/master/img/t3s_connect_1213.jpeg)
 ps.3. 时间关系, 没搞Windows版的执行脚本, 感兴趣的朋友可以自行添加.
 
 ## 【执行样例】  
