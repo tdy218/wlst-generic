@@ -20,13 +20,17 @@ WebLogic generic and standalone wlst cli with Jython 2.7.1
 进入WLST命令行模式:  ./wlst_generic.sh  
 执行wlst/jython脚本:  ./wlst_generic.sh  /path/to/xxx.py
 
-### 【包安装工具使用方法】  
+### 【包安装工具使用方法 - 已连接互联网】 
 - 进入wlst-generic/tools目录，执行pip或easy_install安装包   
 ./pip install <包名>     #例如: ./pip install openpyxl  
 ./easy_install <包名>    #例如: ./easy_install openpyxl    
 
 **pip安装第三方包样例**    
 <img src="https://github.com/tdy218/public-resources/blob/master/img/pip_install_packages.jpeg" alt="Package install by pip image" width="60%" height="30%">
+
+### 【包安装工具使用方法 - 未连接互联网】 
+- 将你的Jython程序中需要的包手工拷贝至wlst-generic/jython/Lib/site-packages目录下即可，无需修改配置或脚本文件.   
+ps.如果是在联网的情况下已经使用pip或easy_install安装了一些第三方的包（默认自动安装在wlst-generic/jython/Lib/site-packages目录下），则需要用该程序包部署在生产环境执行Jython脚本时，则直接将wlst-generic目录重新压缩打包，拷贝至生产环境即可（绿色无依赖）。
 
 ### 【t3s协议连接配置和使用方法】
 - 将你要连接的域使用的SSL根证书（xxx.jks，也支持其他与JDK兼容的SSL证书格式）拷贝至wlst-generic/security/cacerts目录下     
