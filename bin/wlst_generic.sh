@@ -43,7 +43,7 @@ WLST_COMMON_OPTIONS="-Dwlst.debug.init=false \
                      -Djava.security.egd=file:/dev/./urandom \
                      -Dbea.home=${WORKING_DIR} \
                      -Dprod.props.file=${WORKING_DIR}/lib/property.txt \
-                     -Dweblogic.home=${WORKING_DIR}/modules \
+                     -Dweblogic.home=${WORKING_DIR} \
                      -Dweblogic.wlstHome=${WORKING_DIR} \
                      -Dwlst.offline.log=disable \
                      -Dpython.home=${JYTHON_HOME}"
